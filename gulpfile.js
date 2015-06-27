@@ -9,13 +9,13 @@ gulp.task('script', [], function () {
 
     return gulp.src(['src/js/awesome-burger.js'])
      .pipe(replace('%AWESOME_BURGER_HTML%', awesomeBurgerHtml))
-     .pipe(gulp.dest("dist/js"));
+     .pipe(gulp.dest("dist"));
 });
 
 gulp.task('sass', function () {
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('build', ['script', 'sass']);
