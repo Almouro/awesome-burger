@@ -1,29 +1,9 @@
-// vars
-$color: #fff; // icon color
-$blue: #158fef; // background color
-$animation: 750ms; // animation speed
-$scale: 1; // icon scale 68/68 default
-
-*, *:before, *:after {
-  box-sizing: border-box;
- }
-
-// spacing + background-color
-body {
-  background: $blue;
-  padding: 40px;
-}
-
-h4 {
-  font-family: arial,helvetica,serif;
-  color: $color;
-  font-size: 18px;
-  text-align: center;
-  margin: 40px 0 0;
-}
+$awesome-burger-color: #fff; // icon color
+$awesome-burger-animation-speed: 750ms;
+$awesome-burger-scale: 1;
 
 .awesome-burger {
-  transform: scale($scale);
+  transform: scale($awesome-burger-scale);
   margin: 40px auto;
   position: relative;
   display: block;
@@ -38,11 +18,11 @@ h4 {
     height: 4px;
     width: 36px;
     border-radius: 2px;
-    background: $color;
+    background: $awesome-burger-color;
 
     transform-origin: 34px 2px;
     transform: rotate( 0deg ); // to prevent pixelatedness
-    transition: all $animation * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); // x to = animation
+    transition: all $awesome-burger-animation-speed * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); // x to = animation
   }
 
   .awesome-burger-top {
@@ -55,14 +35,14 @@ h4 {
   }
 
   path, line {
-    stroke: $color;
+    stroke: $awesome-burger-color;
     stroke-linecap: round;
   }
 
   .awesome-burger-circle {
     stroke-dasharray: 1 100 32 300; // 32 is the hamburger size
     stroke-dashoffset: 101; // setting up a gap to swipe in from the left
-    transition: all $animation ease; // - to () animation
+    transition: all $awesome-burger-animation-speed ease; // - to () animation
   }
 
   &.awesome-burger-closed {
