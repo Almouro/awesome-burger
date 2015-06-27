@@ -1,0 +1,90 @@
+// vars
+$color: #fff; // icon color
+$blue: #158fef; // background color
+$animation: 750ms; // animation speed
+$scale: 1; // icon scale 68/68 default
+
+*, *:before, *:after {
+  box-sizing: border-box;
+ }
+
+// spacing + background-color
+body {
+  background: $blue;
+  padding: 40px;
+}
+
+h4 {
+  font-family: arial,helvetica,serif;
+  color: $color;
+  font-size: 18px;
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+.hamburglar {
+  transform: scale($scale);
+  margin: 40px auto;
+  position: relative;
+  display: block;
+  width: 68px;
+  height: 68px;
+  //background: $blue;
+  -webkit-touch-callout: none;
+	user-select: none;
+}
+#top, #bottom {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: $color;
+}
+#top {
+  top: 19px;
+  left: 14px;
+}
+#bottom {
+  top: 41px;
+  left: 14px;
+}
+
+path, line {
+  stroke: $color;
+  stroke-linecap: round;
+}
+
+
+// Starting values
+#top, #bottom {
+  transform-origin: 34px 2px;
+  transform: rotate( 0deg ); // to prevent pixelatedness
+  transition: all $animation * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); // x to = animation
+}
+#circle {
+  stroke-dasharray: 1 100 32 300; // 32 is the hamburger size
+  stroke-dashoffset: 101; // setting up a gap to swipe in from the left
+  transition: all $animation ease; // - to () animation
+}
+
+
+// End values (animation done by transitions)
+.hamburglar.is-closed {
+  // The circle animation is done by changing two things:
+  // - a new 100px gap is swiped in from the left by changing offset
+  // - the 'burger' dash is increased from 32px to 190px
+  #circle {
+    stroke-dasharray: 1 100 190 300;
+    stroke-dashoffset: 1;
+  }
+  
+  // Rotate the top and bottom 'bum' to make a cross, and shift them to
+  // the right a little bit
+  #top {
+    transform: translateX( -4.5px ) rotate( -45deg );
+  }
+  #bottom {
+    transform: translateX( -4.5px ) rotate( 45deg );
+  }
+}
