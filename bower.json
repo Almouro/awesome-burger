@@ -1,0 +1,26 @@
+{
+  "name": "awesome-burger",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Almouro/awesome-burger",
+  "authors": [
+    "Almouro <contact@almouro.com>"
+  ],
+  "description": "A fancy burger menu button with awesome SVG animation",
+  "main": ["dist/awesome-burger.js", "src/scss/awesome-burger.scss"],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "menu",
+    "burger",
+    "svg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
