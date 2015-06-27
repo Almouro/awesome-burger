@@ -1,3 +1,9 @@
+$awesome-burger-color: #fff;
+$awesome-burger-animation-speed: 750ms;
+$awesome-burger-scale: 1;
+
+@import '../../../src/scss/awesome-burger';
+
 body {
   background: #158fef;
   padding: 40px;

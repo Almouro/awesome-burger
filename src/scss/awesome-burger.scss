@@ -1,6 +1,6 @@
-$awesome-burger-color: #fff; // icon color
-$awesome-burger-animation-speed: 750ms;
-$awesome-burger-scale: 1;
+$awesome-burger-color: #fff !default;
+$awesome-burger-animation-speed: 750ms !default;
+$awesome-burger-scale: 1 !default;
 
 .awesome-burger {
   transform: scale($awesome-burger-scale);

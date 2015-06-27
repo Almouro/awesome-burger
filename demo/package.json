@@ -1,0 +1,16 @@
+{
+  "name": "awesome-burger-demo",
+  "version": "0.0.0",
+  "description": "A demo for awesome-burger using bower",
+  "main": "gulpfile.js",
+  "scripts": {
+    "postinstall": "gulp build",
+    "start": "gulp watch"
+  },
+  "author": "Alexandre Moureaux",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.2"
+  }
+}
