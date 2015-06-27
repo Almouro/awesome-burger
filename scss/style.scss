@@ -22,7 +22,7 @@ h4 {
   margin: 40px 0 0;
 }
 
-.hamburglar {
+.awesome-burger {
   transform: scale($scale);
   margin: 40px auto;
   position: relative;
@@ -33,7 +33,7 @@ h4 {
   -webkit-touch-callout: none;
 	user-select: none;
 }
-#top, #bottom {
+.awesome-burger-top, .awesome-burger-bottom {
   position: absolute;
   display: block;
   height: 4px;
@@ -41,11 +41,11 @@ h4 {
   border-radius: 2px;
   background: $color;
 }
-#top {
+.awesome-burger-top {
   top: 19px;
   left: 14px;
 }
-#bottom {
+.awesome-burger-bottom {
   top: 41px;
   left: 14px;
 }
@@ -57,12 +57,12 @@ path, line {
 
 
 // Starting values
-#top, #bottom {
+.awesome-burger-top, .awesome-burger-bottom {
   transform-origin: 34px 2px;
   transform: rotate( 0deg ); // to prevent pixelatedness
   transition: all $animation * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); // x to = animation
 }
-#circle {
+.awesome-burger-circle {
   stroke-dasharray: 1 100 32 300; // 32 is the hamburger size
   stroke-dashoffset: 101; // setting up a gap to swipe in from the left
   transition: all $animation ease; // - to () animation
@@ -70,21 +70,21 @@ path, line {
 
 
 // End values (animation done by transitions)
-.hamburglar.is-closed {
+.awesome-burger.awesome-burger-closed {
   // The circle animation is done by changing two things:
   // - a new 100px gap is swiped in from the left by changing offset
   // - the 'burger' dash is increased from 32px to 190px
-  #circle {
+  .awesome-burger-circle {
     stroke-dasharray: 1 100 190 300;
     stroke-dashoffset: 1;
   }
-  
+
   // Rotate the top and bottom 'bum' to make a cross, and shift them to
   // the right a little bit
-  #top {
+  .awesome-burger-top {
     transform: translateX( -4.5px ) rotate( -45deg );
   }
-  #bottom {
+  .awesome-burger-bottom {
     transform: translateX( -4.5px ) rotate( 45deg );
   }
 }

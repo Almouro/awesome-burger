@@ -1,5 +1,5 @@
   $('document').ready(function () {
-    var trigger = $('#hamburger'),
+    var trigger = $('.awesome-burger'),
         isClosed = true;
 
     trigger.click(function () {
@@ -8,12 +8,10 @@
 
     function burgerTime() {
       if (isClosed == true) {
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
+        trigger.addClass('awesome-burger-closed');
         isClosed = false;
       } else {
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
+        trigger.removeClass('awesome-burger-closed');
         isClosed = true;
       }
     }
