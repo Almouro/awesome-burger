@@ -1,19 +1,8 @@
-  $('document').ready(function () {
-    var trigger = $('.awesome-burger'),
-        isClosed = true;
+function toggleAwesomeBurger() {
+  this.classList.toggle('awesome-burger-closed');
+}
 
-    trigger.click(function () {
-      burgerTime();
-    });
-
-    function burgerTime() {
-      if (isClosed == true) {
-        trigger.addClass('awesome-burger-closed');
-        isClosed = false;
-      } else {
-        trigger.removeClass('awesome-burger-closed');
-        isClosed = true;
-      }
-    }
-
-  });
+var awesomeBurgers = document.getElementsByClassName('awesome-burger');
+for(var i = 0; i < awesomeBurgers.length; i++) {
+  awesomeBurgers[i].onclick = toggleAwesomeBurger;
+}
