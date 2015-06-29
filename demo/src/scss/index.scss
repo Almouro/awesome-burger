@@ -1,12 +1,16 @@
 $awesome-burger-color: #fff;
 $awesome-burger-animation-speed: 750ms;
-$awesome-burger-scale: 1;
+$awesome-burger-scale: 4;
 
 @import '../../../src/scss/awesome-burger';
 
+.awesome-burger {
+  margin: auto;
+  transform-origin: center -60%;
+}
+
 body {
   background: #158fef;
-  padding: 40px;
 }
 
 h4 {
@@ -14,5 +18,4 @@ h4 {
   color: white;
   font-size: 18px;
   text-align: center;
-  margin: 40px 0 0;
 }

@@ -2,13 +2,20 @@ $awesome-burger-color: #fff !default;
 $awesome-burger-animation-speed: 750ms !default;
 $awesome-burger-scale: 1 !default;
 
+@mixin transform-origin($x, $y) {
+  -ms-transform-origin: $x $y;
+  -webkit-transform-origin: $x $y;
+  transform-origin: $x $y;
+}
+
 .awesome-burger {
+  -ms-transform: scale($awesome-burger-scale);
+  -webkit-transform: scale($awesome-burger-scale);
   transform: scale($awesome-burger-scale);
-  margin: 40px auto;
-  position: relative;
+  @include transform-origin(0,0);
   display: block;
-  width: 68px;
-  height: 68px;
+  width: 64px;
+  height: 64px;
   -webkit-touch-callout: none;
 	user-select: none;
 
